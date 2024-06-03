@@ -26,6 +26,7 @@
             "outputPath": "dist/wijimo-grid",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            
             "polyfills": [
               "zone.js"
             ],
@@ -33,11 +34,14 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@mescius/wijmo.styles/wijmo.css"
             ],
             "scripts": []
           },
@@ -91,7 +95,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": [
