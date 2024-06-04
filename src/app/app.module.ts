@@ -6,6 +6,7 @@ import { GridComponent } from './components/grid/grid.component';
 import * as wjGrid from '@mescius/wijmo.angular2.grid';
 import { WjGridFilterModule } from '@mescius/wijmo.angular2.grid.filter';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
     BrowserModule,
     AppRoutingModule,
     wjGrid.WjGridModule,
-    WjGridFilterModule
+    WjGridFilterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

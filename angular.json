@@ -41,6 +41,7 @@
             "styles": [
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@grapecity/wijmo.styles/wijmo.css",
               "node_modules/@mescius/wijmo.styles/wijmo.css"
             ],
             "scripts": []
