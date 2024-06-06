@@ -16,15 +16,19 @@ export class EmployeeServiceService {
   }
 
 removeDuplicates(searchTerm?: string): Observable<void>{
-  let params = new HttpParams();
+    let params = new HttpParams();
   if(searchTerm){
     params = params.set('searchTerm' , searchTerm )
-  }
+    }
   return this._http.delete<void> (`http://localhost:8080/removeDuplicates`,{params});
-}
+  }
 
 searchEmployee(employeeName:string) : Observable<any[]>{
   return this._http.get<any[]>('http://localhost:8080/searchEmployee?',{params:{employeeName}});
+}
+
+sortEmployees(sortBy: string , sortOrder: string) {
+  return this._http.get<any[]>(`http://localhost:8080/sortEmployees`,{params:{sortBy,sortOrder} });
 }
 
 }

@@ -6,3 +6,30 @@
 .search{
   margin-left: 20px;  
 }
+.wj-flexgrid .wj-colheaders .wj-sort-asc {
+  color: green !important;
+  font-size: 125%;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.wj-flexgrid.wj-sort-asc{
+  color: green !important;
+}
+.custom-color .wj-glyph-up {
+  color: green !important;
+  font-size: 125%;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.custom-color.wj-glyph-down {
+  color: red !important;
+  font-size: 125%;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+
+
+
+

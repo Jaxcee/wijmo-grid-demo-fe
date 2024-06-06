@@ -1,17 +1,21 @@
-<div class="buttons">
-  <div>
-    <button (click)="removeDuplicates()">Remove Duplicates</button>
+<div class="container">
+  <div class="buttons">
+    
+    <div>
+      <button (click)="removeDuplicates()">Remove Duplicates</button>
+    </div>
+    <div>
+      <input class="search" placeholder="search" (input)="filterData($event)">
+    </div>
+  
   </div>
-  <div>
-    <input class="search" placeholder="search" (input)="filterData($event)">
-  </div>
-  <div></div>
+  <wj-flex-grid #flex [itemsSource]="data" 
+  [allowSorting]="true" (sortedColumn)="onSortIconClick(flex,$event)"
+  class="custom-color">
+    <ng-container *ngFor="let col of grid">
+      <wj-flex-grid-column
+      [header]="col.header" [binding]="col.binding">
+      </wj-flex-grid-column>
+    </ng-container>
+  </wj-flex-grid>
 </div>
-<wj-flex-grid #flex [itemsSource]="data">
-  <wj-flex-grid-filter></wj-flex-grid-filter>
-<wj-flex-grid-column [header]="'ID'" [binding]="'empId'"></wj-flex-grid-column>
-  <wj-flex-grid-column [header]="'Name'" [binding]="'employeeName'"></wj-flex-grid-column>
-  <wj-flex-grid-column [header]="'Department'" [binding]="'departmentName'"></wj-flex-grid-column>
-  <wj-flex-grid-column [header]="'Salary'" [binding]="'salary'"></wj-flex-grid-column>
-</wj-flex-grid>
-
